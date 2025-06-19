@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anniversary Celebration</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anniversary Celebration</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>Happy Anniversary!</h1>
-        <p>Celebrating our love and memories together.</p>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Details about your journey together.</p>
-        </section>
-<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="gallery-grid">
--    <img src="assets/media/photo1.jpg" alt="我们的合影">
-+    <!-- 手动添加 visible 类，立刻触发动画 -->
-+    <img src="assets/media/photo1.jpg"
-+         alt="我们的合影"
-+         class="visible" />
-  </div>
-</section>
+  <header>
+    <h1>Happy Anniversary!</h1>
+    <p>Celebrating our love and memories together.</p>
+  </header>
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Details about your journey together.</p>
+    </section>
 
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <!-- 仅保留一张照片，手动添加 visible 类触发动画 -->
+        <img
+          src="assets/media/photo1.jpg"
+          alt="我们的合影"
+          class="visible"
+        />
+      </div>
+    </section>
 
-        <section id="messages">
-            <h2>Messages</h2>
-            <p>Heartfelt messages from friends and family.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Your Names. All rights reserved.</p>
-    </footer>
-    <script src="scripts/main.js"></script>
+    <section id="messages">
+      <h2>Messages</h2>
+      <p>Heartfelt messages from friends and family.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Your Names. All rights reserved.</p>
+  </footer>
+  <script src="scripts/main.js"></script>
 </body>
 </html>

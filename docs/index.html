@@ -16,12 +16,17 @@
             <h2>About Us</h2>
             <p>Details about your journey together.</p>
         </section>
-            <section id="gallery">
-              <h2>Gallery</h2>
-              <div class="gallery-grid">
-            <img src="assets/media/photo1.jpg" alt="我们在一起的幸福瞬间">
-          </div>
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+-    <img src="assets/media/photo1.jpg" alt="我们的合影">
++    <!-- 手动添加 visible 类，立刻触发动画 -->
++    <img src="assets/media/photo1.jpg"
++         alt="我们的合影"
++         class="visible" />
+  </div>
 </section>
+
 
         <section id="messages">
             <h2>Messages</h2>

@@ -1,3 +1,4 @@
+/* —— 你原有的样式 —— */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -39,6 +40,44 @@ a {
     color: #ff6f61;
     text-decoration: none;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ========= 在这里开始追加动画相关的样式 ========= */
+
+/* 1. 定义关键帧动画 fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. 初始状态，让所有 gallery 中的图片透明 */
+.gallery-grid img {
+  opacity: 0;
+}
+
+/* 3. visible 类触发动画 */
+.gallery-grid img.visible {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* 如果还没写 Gallery 布局，也可以一并加上： */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+/* ========= 动画样式追加结束 ========= */
+
 
 a:hover {
     text-decoration: underline;

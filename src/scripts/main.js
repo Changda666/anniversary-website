@@ -1,0 +1,1 @@
+// This file contains the JavaScript code for the website. It may include functionality for interactive elements, event handling, and any dynamic content updates.

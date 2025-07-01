@@ -45,7 +45,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ========= 在这里开始追加动画相关的样式 ========= */
+/* ========= 在这里开始追加画廊和动画相关的样式 ========= */
 
 /* 1. 定义关键帧动画 fadeInUp */
 @keyframes fadeInUp {
@@ -59,35 +59,30 @@ a:hover {
   }
 }
 
-/* 2. 初始状态，让所有 gallery 中的图片透明 */
-.gallery-grid img {
-  width: 100%;           /* 保持响应式：铺满父容器 */
-  max-width: 300px;      /* 不会超出 300px */
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  opacity: 0;            /* 依旧用于动画初始状态 */
-}
-
-
-/* 3. visible 类触发动画 */
-.gallery-grid img.visible {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-/* 如果还没写 Gallery 布局，也可以一并加上： */
+/* 2. 画廊网格布局：固定列宽 300px，居中对齐 */
 .gallery-grid {
   display: grid;
-  /* 由 minmax(150px,1fr) 改为 minmax(120px,1fr) */
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
   gap: 12px;
   margin-top: 16px;
 }
 
+/* 3. 图片初始状态与尺寸：宽度 300px，居中放置 */
+.gallery-grid img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  opacity: 0;
+  justify-self: center;
+}
+
+/* 4. visible 类触发动画 */
+.gallery-grid img.visible {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
 /* ========= 动画样式追加结束 ========= */
 
-
-a:hover {
-    text-decoration: underline;
-}

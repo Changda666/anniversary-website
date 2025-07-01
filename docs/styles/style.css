@@ -79,10 +79,12 @@ a:hover {
 /* 如果还没写 Gallery 布局，也可以一并加上： */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  /* 由 minmax(150px,1fr) 改为 minmax(120px,1fr) */
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 12px;
   margin-top: 16px;
 }
+
 /* ========= 动画样式追加结束 ========= */
 
 
